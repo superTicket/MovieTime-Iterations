@@ -157,10 +157,16 @@ public class MainController {
 
         return "selectSeat";
     }
-    @RequestMapping(value = "/payment", method = RequestMethod.POST)
-    public String payment(String selectedList_JSON, Model model) {
-        System.out.println("POST@'/payment', Selected Seat:" + selectedList_JSON);
+    @RequestMapping(value = "/try_book_ticket", method = RequestMethod.POST)
+    @ResponseBody
+    public String try_finish_payment(String selectedList_JSON, Model model) {
+        System.out.println(selectedList_JSON);
 
+        int randNum = new Random().nextInt(2);
+        return randNum % 2 == 0 ? "succeed" : "fail";
+    }
+    @RequestMapping(value = "/payment")
+    public String payment(Model model) {
         model.addAttribute("username", "Alice");
         model.addAttribute("usericon_path", "/images/user_icon/p1.png");
 

@@ -13,8 +13,10 @@ function proceed() {
         success: function (data) {
             if (data == "succeed")
                 $("#succeed").modal('show');
-            else
+            else {
+                $("#error_text").text(data);
                 $("#failure").modal('show');
+            }
 
         }
     });

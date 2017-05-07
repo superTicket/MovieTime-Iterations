@@ -26,5 +26,24 @@ function findAndDelete(selectedList, seat) {
 }
 
 function proceed() {
-    post('/payment', {selectedList_JSON:JSON.stringify(selectedList)});
+    if (selectedList.length > 0) {
+        $.ajax({
+            url: '/try_book_ticket',
+            method: 'POST',
+            data: {
+                selectedList_JSON: JSON.stringify(selectedList)
+            },
+            success: function (data) {
+                if (data == "succeed") {
+                    window.location.href = '/payment'
+                }
+                else {
+                    $("#seat_taken").modal('show');
+                }
+            }
+        });
+    }
+    else {
+        $("#no_selected").modal("show");
+    }
 }

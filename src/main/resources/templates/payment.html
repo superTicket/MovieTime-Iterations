@@ -12,6 +12,7 @@
 	<!--//frameworks-->
 
 	<link href="css/nav/style.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/common.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="css/payment/style.css" rel="stylesheet" type="text/css" media="all" />
 	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 	<script src="js/payment/scripts.js"></script>
@@ -178,8 +179,10 @@
 		<div class="modal-content">
 			<section>
 				<div class="modal-body">
-					<img style="display: block; margin-right:auto; margin-left:auto;"
-						 src="images/payment/failure_payment.png"/>
+					<div class="modal-body">
+						<img class="center" style="width: 30%; height: 30%;" src="images/payment/failure_payment_icon.png"/>
+						<h1 class="bigFont center" style="text-align: center" id="error_text"></h1>
+					</div>
 				</div>
 			</section>
 		</div>
