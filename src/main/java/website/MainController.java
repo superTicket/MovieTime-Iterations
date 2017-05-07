@@ -9,6 +9,8 @@ import website.View.MovieforDisplay;
 import website.View.PanelforDisplay;
 import website.View.TheaterforDisplay;
 
+import java.util.Random;
+
 @Controller
 public class MainController {
 
@@ -174,15 +176,15 @@ public class MainController {
 
         return "payment";
     }
-    @RequestMapping(value = "/try_finish_payment", method = RequestMethod.POST)
+    @RequestMapping(value = "/try_payment", method = RequestMethod.POST)
     @ResponseBody
     public String try_finish_payment(String email, String phone, String card_number,
                                      String cvv, String card_holder_name, String valid_thru, Model model) {
-        return "email:" + email +
-                "<br/>phone:" + phone +
-                "<br/>card_number:" + card_number +
-                "<br/>cvv:" + cvv +
-                "<br/>card_holder_name:" + card_holder_name +
-                "<br/>valid_thru:" + valid_thru;
+        System.out.println("\nemail:" + email + "\nphone:" + phone + "\ncard_number:" +
+                card_number + "\ncvv:" + cvv + "\ncard_holder_name:" + card_holder_name +
+                "\nvalid_thru:" + valid_thru);
+
+        int randNum = new Random().nextInt(2);
+        return randNum % 2 == 0 ? "succeed" : "fail";
     }
 }

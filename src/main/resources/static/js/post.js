@@ -14,3 +14,17 @@ function post(URL, PARAMS) {
     temp.submit();
     return temp;
 }
+
+function ajaxPost(URL, PARAMS, CALLBACK) {
+    var data = new FormData();
+    for (var key in PARAMS) {
+        data.append(key, PARAMS[key]);
+    }
+
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', URL, true);
+    xhr.onload = function (data) {
+        CALLBACK();
+    };
+    xhr.send(data);
+}
