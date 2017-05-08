@@ -164,7 +164,7 @@ ul.header_right_box{
 	padding:0;
 	margin: 0 0 0 33%;
 	list-style:none;
-	
+
 }
 ul.header_right_box li{
 	float: left;
@@ -282,7 +282,7 @@ a.morebtn:hover{
 	visibility:hidden;
 }
 .callbacks_tabs li{
-	
+
 }
 ul.callbacks_tabs.callbacks1_tabs {
 	position: absolute;
@@ -378,7 +378,7 @@ ul.callbacks_tabs.callbacks1_tabs {
 		width: 4px;
 	}
 	ul.callbacks_tabs.callbacks1_tabs {
-		
+
 	}
 }
 @media(max-width:320px){
@@ -401,7 +401,7 @@ ul.callbacks_tabs.callbacks1_tabs {
 	a.morebtn {
 		width: 50%;
 		font-size: 0.8em;
-		padding:0.6em 0.5em; 
+		padding:0.6em 0.5em;
 	}
 	.callbacks_tabs a:after {
 		height:4px;
@@ -635,7 +635,7 @@ width: 100%;
 text-align: center;
 }
 .grid_2:hover, .row_2:hover, .m_5:hover, .m_6:hover, .m_7:hover, .m_8:hover{
-	
+
 	transition:0.5s all;
 	-webkit-transition:0.5s all;
 	-moz-transition:0.5s all;
@@ -644,7 +644,7 @@ text-align: center;
 	opacity:0.8;
 }
 .grid_2:hover i.icon4{
-	
+
 
 }
 .grid_3{
@@ -654,7 +654,7 @@ text-align: center;
 	padding-left:0;
 }
 .grid_5{
-	
+
 }
 .col-md-6.grid_7 {
 padding-right: 0;
@@ -673,7 +673,7 @@ ul.list_4{
 }
 ul.list_4 li, ul.list_6 li{
 	color:#3f444e;
-	
+
 	font-weight: 600;
 	font-size: 1.1em;
 }
@@ -825,7 +825,7 @@ ul.first li a:hover{
 	color:#d8232a;
 }
 .footer_box{
-	
+
 }
 .copy p{
 	color:#fff;

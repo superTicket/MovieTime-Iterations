@@ -5,6 +5,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import website.View.BannerforDisplay;
 import website.View.MovieforDisplay;
 import website.View.PanelforDisplay;
 import website.View.TheaterforDisplay;
@@ -20,6 +21,12 @@ public class MainController {
         model.addAttribute("usericon_path", "/images/user_icon/p1.png");
         model.addAttribute("bannerMovie_name", "Guardians of the Galaxy");
         model.addAttribute("banner_path", "/images/homepage/banner.jpg");
+
+        BannerforDisplay [] bannerList = new BannerforDisplay[3];
+        bannerList[0] = new BannerforDisplay("Guardians of the Galaxy", "/images/homepage/banner.jpg");
+        bannerList[1] = new BannerforDisplay("Transformers 4", "/images/homepage/banner1.jpg");
+        bannerList[2] = new BannerforDisplay("Game of Thrones", "/images/homepage/banner2.jpg");
+        model.addAttribute("bannerList", bannerList);
 
         PanelforDisplay[] panelList = new PanelforDisplay[4];
         for (int i = 0; i < 4; i++) {

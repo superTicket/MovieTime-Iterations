@@ -12,3 +12,10 @@
     color: red !important;
     visibility: hidden;
 }
+
+button {
+    cursor: pointer;
+}
+a {
+    cursor: pointer;
+}
