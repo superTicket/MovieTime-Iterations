@@ -174,8 +174,9 @@
 </div>
 <script>
     $(function () { $('#seat_taken').on('hide.bs.modal', function () {
-        window.history.go(-1);
+        window.location.reload();
     })});
+    $("#seat-map").attr("aria-activedescendant", "");
 </script>
 <!--//seat taken dialog-->
 <!--//payment failure dialog-->
