@@ -25,7 +25,7 @@
 	<link href="css/homepage/featureMoviesCSS/medile.css" rel='stylesheet' type='text/css' />
 	<!--//headers for featureMovies-->
 </head>
-<body style="cursor:pointer;">
+<body>
 
 <div class="container">
 	<div class="container_wrap">
@@ -69,6 +69,7 @@
 			   data-slide="next">&rsaquo;
 			</a>
 		</div>
+		<script>$('.carousel').carousel()</script>
 
 		<div class="content">
 			<!--feature movies-->
@@ -90,7 +91,7 @@
 											</a>
 											<div class="mid-1 agileits_w3layouts_mid_1_home">
 												<div class="w3l-movie-text">
-													<h6><a href="/selectShow" th:text="${movieItem.name}"></a></h6>
+													<h6><a th:name="${movieItem.name}" onclick="clickMovie(this)" th:text="${movieItem.name}"></a></h6>
 												</div>
 												<div class="mid-2 agile_mid_2_home">
 

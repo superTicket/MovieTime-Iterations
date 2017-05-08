@@ -14,7 +14,6 @@ import java.util.Random;
 
 @Controller
 public class MainController {
-
     @RequestMapping(value="/", method = RequestMethod.GET)
     public String get_homepage(Model model) {
         model.addAttribute("username", "Alice");
@@ -71,6 +70,7 @@ public class MainController {
 
         return "homepage";
     }
+
     @RequestMapping(value="/selectShow", method = RequestMethod.POST)
     public String post_homepage(String movieName, Model model) {
         System.out.println("POST@'/selectShow': movieName='" + movieName + "'");
@@ -166,10 +166,10 @@ public class MainController {
     }
     @RequestMapping(value = "/try_book_ticket", method = RequestMethod.POST)
     @ResponseBody
-    public String try_finish_payment(String selectedList_JSON, Model model) {
+    public String try_bookTicket(String selectedList_JSON, Model model) {
         System.out.println(selectedList_JSON);
 
-        int randNum = new Random().nextInt(2);
+        int randNum = new Random().nextInt(3);
         return randNum % 2 == 0 ? "succeed" : "fail";
     }
     @RequestMapping(value = "/payment")
@@ -197,7 +197,7 @@ public class MainController {
                 card_number + "\ncvv:" + cvv + "\ncard_holder_name:" + card_holder_name +
                 "\nvalid_thru:" + valid_thru);
 
-        int randNum = new Random().nextInt(2);
+        int randNum = new Random().nextInt(3);
         return randNum % 2 == 0 ? "succeed" : "fail";
     }
 }
